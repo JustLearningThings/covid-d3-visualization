@@ -128,7 +128,7 @@ function createPlot(data, date) {
 }
 
 function printExtraDataToTooltip(data) {
-	if(data.new_cases !== '') printToTooltip(`Median age: ${data.new_cases.toLocaleString()}`);
+	if(data.new_cases !== '') printToTooltip(`New cases: ${data.new_cases.toLocaleString()}`);
 	if(data.new_deaths !== '') printToTooltip(`New deaths: ${data.new_deaths.toLocaleString()}`);
 	if(data.total_tests !== '') printToTooltip(`Total tests: ${data.total_tests.toLocaleString()}`);
 	if(data.new_tests !== '') printToTooltip(`New tests: ${data.new_tests.toLocaleString()}`);
