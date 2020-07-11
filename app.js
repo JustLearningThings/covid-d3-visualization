@@ -12,7 +12,7 @@ var tooltip = d3.select('body')
 				.append('div')
 				  .classed('tooltip', true);
 
-d3.csv('./owid-covid-data.csv', (error, data) => {
+d3.csv('https://covid.ourworldindata.org/data/owid-covid-data.csv', (error, data) => {	
 	if(error) throw error;
 
 	data = data.filter(d => d.population !== '' && d.total_cases !== '' 
