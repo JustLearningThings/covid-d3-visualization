@@ -226,7 +226,7 @@ function displayCountryData(d) {
       	  	<p>Density: ${d.population_density.toLocaleString()}</p>
       	  	`);
 
-    if(d.new_cases !== '') div.append('p').text(`Median age: ${d.new_cases.toLocaleString()}`);
+    if(d.new_cases !== '') div.append('p').text(`New cases: ${d.new_cases.toLocaleString()}`);
 	if(d.new_deaths !== '') div.append('p').text(`New deaths: ${d.new_deaths.toLocaleString()}`);
 	if(d.total_tests !== '') div.append('p').text(`Total tests: ${d.total_tests.toLocaleString()}`);
 	if(d.new_tests !== '') div.append('p').text(`New tests: ${d.new_tests.toLocaleString()}`);
