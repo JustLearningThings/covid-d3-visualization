@@ -40,9 +40,11 @@ d3.csv('https://covid.ourworldindata.org/data/owid-covid-data.csv', (error, data
 	d3.select('form')
 	  .on('submit', () => {
 	  	d3.event.preventDefault();
+	  	var searchStr = search.property('value');
+	  	var searchStr = searchStr.charAt(0).toUpperCase() + searchStr.slice(1);
 
 	  	var countryData = data.filter(d => d.date == d3.select('[type=\'date\']').property('value')
-	  		&& search.property('value') === d.location);
+	  		&& searchStr === d.location);
 
 	  	if(countryData && countryData.length > 0) {
 	  		displayCountryData(countryData[0]);
